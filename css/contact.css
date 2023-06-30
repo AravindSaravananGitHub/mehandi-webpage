@@ -13,7 +13,7 @@
 
 .contactUs {
     position: relative;
-    width: 100%;
+    width: 90%;
     padding: 40px 100px;
 }
 
@@ -61,6 +61,7 @@
         "info map";
     grid-gap: 20px;
     overflow: hidden;
+    margin: 20px;
 }
 
 .contact h3 {
@@ -214,6 +215,52 @@
 
 /* Responsive */
 
+@media (max-width:648px) {
+    .contactUs {
+        padding: 15px;
+    }
+
+    .box {
+        width: 550px;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "form"
+            "info"
+            "map";
+    }
+
+    .vettri {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .map {
+        min-width: 200px;
+    }
+
+    .formBox .row50 {
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .inputBox {
+        width: 100%;
+    }
+
+    .contact {
+        padding: 30px;
+    }
+
+    .map {
+        min-width: 300px;
+        padding: 0;
+    }
+}
+
 @media (max-width:991px) {
     .contactUs {
 
@@ -221,6 +268,7 @@
     }
 
     .box {
+        width: 350px;
         position: relative;
         display: grid;
         grid-template-columns: minmax(170px, 1fr);
