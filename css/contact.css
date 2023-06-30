@@ -54,12 +54,13 @@
 .box {
     position: relative;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
     grid-template-rows: 5fr 4fr;
     grid-template-areas:
         "form info"
         "form map";
     grid-gap: 20px;
+     overflow: hidden;
 }
 
 .contact h3 {
@@ -222,7 +223,7 @@
     .box {
         position: relative;
         display: grid;
-        grid-template-columns: minmax(180px, 1fr);
+        grid-template-columns: minmax(170px, 1fr);
         grid-template-rows: auto;
         grid-template-areas:
             "form"
