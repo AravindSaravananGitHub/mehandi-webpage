@@ -268,7 +268,7 @@
     }
 
     .box {
-        width: 350px;
+        width: 330px;
         position: relative;
         display: grid;
         grid-template-columns: minmax(170px, 1fr);
