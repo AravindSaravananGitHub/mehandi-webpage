@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    scroll-behavior: smooth;
+    background-color: #fff200;
+    background: rgb(85, 252, 211);
+    background: linear-gradient(156deg, rgba(85, 252, 211, 1) 11%, rgba(113, 191, 245, 1) 75%, rgba(231, 226, 242, 1) 96%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* 
+=============================================
+Nav Bar Started
+============================================= 
+*/
+
+header {
+    display: flex;
+    /* background: rgb(238, 238, 238);
+    background: linear-gradient(23deg, rgba(238, 238, 238, 1) 0%, rgba(108, 188, 225, 1) 100%); */
+    background: rgb(231, 226, 242);
+    background: linear-gradient(156deg, rgba(231, 226, 242, 1) 7%, rgba(85, 181, 252, 1) 63%, rgba(25, 178, 190, 1) 91%);
+    height: 70px;
+    width: 100%;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 999;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+header .logo {
+    padding: 15px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+header .nav {
+    width: 100%;
+    height: 50px;
+    margin-right: 80px;
+}
+
+header .nav ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 25px;
+}
+
+header .nav ul li {
+    list-style: none;
+    padding: 0 0 40px 40px;
+}
+
+header .nav ul li a {
+    text-decoration: none;
+    color: #ffff;
+    position: relative;
+    transition: all 0.6s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+header .nav ul li a:hover {
+    color: #fff200;
+}
+
+header .nav ul li a:active {
+    color: #fff200;
+}
+
+header .nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: gold;
+    bottom: 0;
+    left: 0;
+    transition: all 0.6s ease;
+}
+
+header .nav ul li a:hover:before {
+    width: 100%;
+}
+
+.bar {
+    display: none;
+    margin-top: 18px;
+    position: absolute;
+    left: 85%;
+}
+
+.bar .barLine {
+    width: 35px;
+    height: 5px;
+    background-color: #ffff;
+    margin: 6px 0;
+    border-radius: 10px;
+}
+
+@media (max-width:868px) {
+    header .nav ul {
+        display: none;
+    }
+
+    .bar {
+        display: block;
+    }
+}
+
+@media (max-width:968px) {
+    header .nav {
+        margin-right: 50px;
+    }
+}
+
+.nav-model {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-model .navDiv {
+    width: 80%;
+    background: rgb(238, 238, 238);
+    background: linear-gradient(290deg, rgba(238, 238, 238, 1) 0%, rgba(108, 188, 225, 1) 47%);
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+
+}
+
+.nav-model .navDiv ul {
+    list-style: none;
+}
+
+
+.nav-model .navDiv ul li a {
+    padding: 20px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: all 0.3s ease;
+    position: relative;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.nav-model .navDiv ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: gold;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    transition: all 0.6s ease;
+}
+
+.nav-model .navDiv ul li a:hover::before {
+    width: 100%;
+}
+
+.nav-model .navDiv ul li a:hover {
+    color: #fff200;
+}
+
+.nav-model .navDiv ul li a:active {
+    color: #fff200;
+}
+
+.nav-model .navDiv ul li a:hover {
+    background-color: rgba(52, 52, 52, 0.1);
+}
+
+/* 
+=============================================
+Nav Bar Ended
+============================================= 
+*/
+
+/* 
+=============================================
+Home Page Start
+============================================= 
+*/
+.home {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    z-index: 777;
+}
+
+.videoHome {
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 10px;
+}
+
+.home::before {
+    z-index: 666;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(130, 218, 255, 0.327);
+    border-radius: 10px;
+}
+
+.homeText {
+    width: 500px;
+    padding: 20px;
+    margin-left: 30px;
+    margin-top: 110px;
+    z-index: 777;
+    background: rgb(238, 238, 238);
+    background: linear-gradient(23deg, rgba(238, 238, 238, 0.8) 0%, rgba(108, 188, 225, 0.8) 100%);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 20px;
+}
+
+.homeText .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.homeText .title span a {
+    color: #fff;
+    text-shadow: rgba(219, 219, 222, 0.25) 0px 6px 12px -2px,
+        rgba(252, 244, 244, 0.3) 0px 3px 7px -3px;
+    ;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+}
+
+.homeText .para {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.homeText .homeBtn button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 10px;
+    background: hsl(62, 78%, 65%);
+    background: linear-gradient(60deg, rgba(231, 235, 94, 1) 8%, rgba(72, 219, 116, 1) 29%, rgba(69, 126, 214, 1) 66%, rgba(245, 121, 87, 1) 84%);
+    background-size: 600%;
+    color: #fff;
+    animation: nisha 6s ease infinite;
+}
+
+.homeText .homeBtn button:hover {
+    background-color: #00cec9;
+    animation: dance 0.6s ease infinite;
+}
+
+@keyframes nisha {
+    0% {
+        background-position: 0;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0;
+    }
+}
+
+@keyframes dance {
+    0% {
+        transform: rotate(0);
+        transform: scale(0px);
+    }
+
+    50% {
+        transform: rotate(10deg);
+        transform: scale(10px);
+    }
+
+    100% {
+        transform: rotate(-10deg);
+        transform: scale(-10px);
+    }
+}
+
+.homeText .homeBtn button:active {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.homeImage {
+    width: 350px;
+    height: 350px;
+    margin-top: 60px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin-top: 110px;
+    z-index: 777;
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.5rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width:986px) {
+    .home {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        /* justify-items: flex-start; */
+        box-sizing: border-box;
+    }
+
+    .home::before {
+        content: '';
+        background: none;
+    }
+
+    .videoHome {
+        display: none;
+    }
+
+    .homeText {
+        width: 80%;
+        text-align: center;
+        margin-left: 10px;
+        margin-top: 90px;
+        background: none;
+        box-shadow: none;
+    }
+
+    .homeText .para {
+        text-align: justify;
+    }
+
+    .homeImage {
+        width: 300px;
+        height: 300px;
+        margin-top: none;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    }
+
+    .homeImage:hover {
+        width: 310px;
+        height: 310px;
+    }
+}
+
+@media (min-width:1224px) {
+    .home::before {
+        height: 100%;
+    }
+
+    .videoHome {
+        height: 100%;
+    }
+}
+
+@media (max-width:1100px) {
+    .home::before {
+        height: 100%;
+    }
+
+    .videoHome {
+        height: 100%;
+    }
+}
+
+/* 
+=============================================
+Home Page End
+============================================= 
+*/
+
+/* 
+=============================================
+Footer Start
+============================================= 
+*/
+
+.footer {
+    width: 100%;
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.footer-container {
+    padding: 10px;
+    background: rgb(238, 238, 238);
+    background: linear-gradient(23deg, rgb(127, 255, 223) 0%, rgb(108, 137, 225) 100%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #130f40;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.footer-container p a {
+    text-decoration: none;
+    color: #e6fff9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* 
+=============================================
+Footer End
+============================================= 
+*/

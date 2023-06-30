@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.about {
+    width: 100%;
+    z-index: 900;
+}
+
+.about .aboutTitle h2 {
+    margin-top: 110px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.about .aboutTitle h2 span {
+    color: #fff200;
+}
+
+.aboutImageContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.aboutImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 20px;
+
+}
+
+.aboutBGimage {
+    position: relative;
+    z-index: 1;
+    transition: all 0.1s ease;
+}
+
+.about-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+
+}
+
+.aboutText {
+    /* max-width: 450px; */
+    font-size: 17px;
+    padding: 15px;
+    margin-right: 20px;
+}
+
+.aboutText h2 {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.aboutText h2 span {
+    color: #fff200;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.about-Para {
+
+    text-align: justify;
+    text-indent: 50px;
+    color: #130f40;
+}
+
+@media (max-width:986px) {
+    .about-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .aboutText {
+        width: 80%;
+    }
+
+    .about-Para {
+        text-align: justify;
+    }
+
+    .aboutBGimage {
+        width: 280px;
+        height: 280px;
+    }
+
+    .aboutImage {
+        width: 190px;
+        height: 190px;
+    }
+}
