@@ -60,6 +60,7 @@
         "form info"
         "form map";
     grid-gap: 20px;
+    margin-right: 35px;
 }
 
 .contact h3 {
