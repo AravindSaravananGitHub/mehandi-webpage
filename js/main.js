@@ -23,3 +23,21 @@ setInterval(() => {
 const date = new Date();
 let year = date.getFullYear();
 footerYear.innerHTML = year;
+
+// For Scroling behavior
+window.addEventListener("scroll", reveal);
+
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+  //console.log(reveals);
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var revealTop = reveals[i].getBoundingClientRect().top;
+    var revealPoint = 150;
+    if (revealTop < windowHeight - revealPoint) {
+      reveals[i].classList.add("act");
+    } else {
+      reveals[i].classList.remove("act");
+    }
+  }
+}
