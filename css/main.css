@@ -458,3 +458,20 @@ Footer Start
 Footer End
 ============================================= 
 */
+
+/* 
+=============================================
+For SCROLING
+============================================= 
+*/
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+
+.reveal.act {
+    transform: translateY(0px);
+    opacity: 1;
+}
